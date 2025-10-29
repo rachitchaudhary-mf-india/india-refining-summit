@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #50555f;
+      }
+
+      .cls-2 {
+        mask: url(#mask);
+      }
+
+      .cls-3 {
+        fill: #d9d9d9;
+      }
+    </style>
+    <mask id="mask" x="-8" y="-8" width="48" height="48" maskUnits="userSpaceOnUse">
+      <g id="mask0_147_86" data-name="mask0 147 86">
+        <rect class="cls-3" x="-8" y="-8" width="48" height="48"/>
+      </g>
+    </mask>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g class="cls-2">
+      <path class="cls-1" d="M24.35,18H0v-4h24.35L13.15,2.8l2.85-2.8,16,16-16,16-2.85-2.8,11.2-11.2Z"/>
+    </g>
+  </g>
+</svg>

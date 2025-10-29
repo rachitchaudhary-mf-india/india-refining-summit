@@ -1,0 +1,97 @@
+<header id="header" class="header header-transparent">
+	<nav class="navbar navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="row row-rc">
+				<div class="navbar-header">
+					<div class="logo">
+						<a href="/">
+							<img src="../images/india-refining-summit.png" alt="India Refining Summit 2024">
+						</a>
+					</div><!-- logo end -->
+				</div><!-- Navbar header end -->
+
+				<div class="site-nav-inner">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<nav class="collapse navbar-collapse navbar-responsive-collapse pull-right">
+
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">Home</a></li>
+							<!-- <li class="active"></li> -->
+							<li><a href="./speakers25.html">SPEAKERS</a></li>
+							<!-- <li><a href="./partners25.html">partners</a></li>
+							<li><a href="./agenda.html">Agenda</a></li>
+							<li><a href="./workshop.html">workshop</a></li> -->
+							<li><a href="./media.html">media</a></li>
+							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Retrospect</a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="./past-speakers.html">PAST SPEAKERS</a></li>
+									<li><a href="./past-partners.html">PAST PARTNERS</a></li>
+									<li><a href="./past-partners.html">PAST PARTNERS</a></li>
+									<li><a href="./participating-companies.html">PARTICIPATING COMPANIES</a></li>
+									<li><a href="./industry-speaks.html">INDUSTRY SPEAKS</a></li>
+								</ul>
+							</li>
+							<!-- <li class="header-ticket"><a class="ticket-btn" href="register.html">Register</a>
+									</li> -->
+						</ul>
+						<!--/ Nav ul end -->
+
+					</nav>
+					<!--/ Collapse end -->
+
+				</div><!-- Site nav inner end -->
+
+			</div><!-- Row end -->
+		</div><!-- Container end -->
+	</nav>
+</header>
+
+
+
+<div id="main-slide" class="carousel slide wow fadeInDown" data-ride="carousel">
+
+			<!-- Indicators -->
+			<ol class="carousel-indicators visible-lg visible-md">
+				<li data-target="#main-slide" data-slide-to="0" class="active"></li>
+				<li data-target="#main-slide" data-slide-to="1"></li>
+				<li data-target="#main-slide" data-slide-to="2"></li>
+			</ol>
+			<!--/ Indicators end-->
+
+			<!-- Carousel inner -->
+			<div class="carousel-inner">
+
+				<div class="item active" style="background-image:url(images/slider/slider-irs.jpg)">
+					<div class="slider-content text-center">
+						<div class="col-md-12">
+							<h5 class="slide-sub-title animated4" style="padding-bottom:5px; color: #217da0; font-size:65px;">Next-Gen Refineries<br><span style="color:#d2232a; font-size:45px;">Smart</span> <span style="font-size:40px;">|</span> <span style="color:#41ad49; font-size:45px;">Self-Reliant</span> <span style="font-size:40px;">|</span> <span style="color:#1f5f7c; font-size:45px;">Sustainable</span></h5>
+							<h6 class="slider-description animated5">28 - 29 May 2026</h6>
+							<h6 class="slider-description01 animated5">New Delhi</h6>
+				
+							<p class="animated6">
+								<a href="https://www.indiarefiningsummit.com/form/partnership/partnership.html" class="slider btn btn-primary"
+									target="_blank">partner with us</a>
+								<!-- <a href="https://www.indiarefiningsummit.com/form/brochure/detail.html" target="_blank"
+									class="slider btn btn-primary">download Brochure</a> -->
+								<!-- <a href="https://www.indiarefiningsummit.com/form/agenda/detail.html" target="_blank"
+									class="slider btn btn-primary">download Agenda</a> -->
+								<a href="https://www.indiarefiningsummit.com/form/enquire/detail.html" class="slider btn btn-primary"
+									target="_blank">i want to exhibit</a>
+								
+									<!-- <a href="https://www.indiarefiningsummit.com/form/delegate/details.html" class="slider btn btn-primary"
+									target="_blank">delegate registration</a> -->
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--/ Carousel item 1 end -->
+
+
+			</div><!-- Carousel inner end-->
+		</div>

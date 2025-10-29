@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Dr. Vishal Choudhary",
+    "designation1": "Scientist-F",
+    "designation2": "Office of the Principal Scientific Adviser to the Government of India",
+    "image": "./images/advisory-board/vishal choudhary.webp"
+  },
+  {
+    "name": "Ms. Shukla Mistry",
+    "designation1": "Former Director (Refineries)",
+    "designation2": "Indian Oil Corporation Ltd.",
+    "image": "./images/advisory-board/sukla-mistry.webp"
+  },
+  {
+    "name": "Dr. Sandeep Jain",
+    "designation1": "Former Executive Director",
+    "designation2": "Indian Oil Corporation Ltd.",
+    "image": "./images/advisory-board/sandeep-jain.webp"
+  },
+  {
+    "name": "Shri Snigdho Majumdar",
+    "designation1": "Executive Director",
+    "designation2": "Engineers India Ltd.",
+    "image": "./images/advisory-board/snigdho.webp"
+  },
+  {
+    "name": "Shri Ravitej P. V.",
+    "designation1": "Former Executive Director (Refineries Project)",
+    "designation2": "Bharat Petroleum Corporation Ltd.",
+    "image": "./images/advisory-board/pv-ravitej.webp"
+  },
+  {
+    "name": "Mr. Anish De",
+    "designation1": "Global Sector Head Energy & Natural Resources",
+    "designation2": "KPMG",
+    "image": "./images/advisory-board/anish-de.webp"
+  },
+  {
+    "name": "Shri D. V. Shastry",
+    "designation1": "Former Executive Director",
+    "designation2": "GAIL (India) Ltd.",
+    "image": "./images/advisory-board/dv-shastry.webp"
+  }
+]

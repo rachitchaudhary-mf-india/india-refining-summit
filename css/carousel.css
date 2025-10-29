@@ -1,0 +1,38 @@
+.advisory-carousel {
+  padding: 40px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.advisory-carousel-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.advisory-carousel-track {
+  display: flex;
+  gap: 24px;
+  flex-wrap: nowrap;
+  will-change: transform;
+}
+
+.advisory-carousel-track .advisory-board {
+  flex: 0 0 auto;
+  width: 205px;
+}
+
+.advisory-carousel-track .person-photo img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+@media (max-width: 479px) {
+  .advisory-carousel {
+    overflow: hidden;
+  }
+
+  .advisory-carousel-track .advisory-board {
+    width: 180px;
+  }
+}

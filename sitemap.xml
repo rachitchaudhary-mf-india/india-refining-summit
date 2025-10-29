@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.indiarefiningsummit.com/index.html</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Partners page -->
+  <url>
+    <loc>https://www.indiarefiningsummit.com/partner.html</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Agenda page -->
+  <url>
+    <loc>https://www.indiarefiningsummit.com/agenda.html</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Workshop page -->
+  <url>
+    <loc>https://www.indiarefiningsummit.com/workshop.html</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Media page -->
+  <url>
+    <loc>https://www.indiarefiningsummit.com/media.html</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Retrospect - Past Speakers -->
+  <url>
+    <loc>https://www.indiarefiningsummit.com/past-speakers.html</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Retrospect - Past Partners -->
+  <url>
+    <loc>https://www.indiarefiningsummit.com/past-partners.html</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Retrospect - Participating Companies -->
+  <url>
+    <loc>https://www.indiarefiningsummit.com/participating-companies.html</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Retrospect - Industry Speaks -->
+  <url>
+    <loc>https://www.indiarefiningsummit.com/industry-speaks.html</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

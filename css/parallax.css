@@ -1,0 +1,181 @@
+:root {
+    --bg-image: url('../images/parallax-background.webp');
+    --hero-height: 70vh;
+    --overlay: rgba(0, 0, 0, 0.35);
+    --content-width: 900px;
+}
+
+
+/* Reset and basic layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html,
+body {
+    height: 100%;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+    color: #111
+}
+
+a {
+    color: inherit
+}
+
+
+/* Parallax layer wrapper */
+.parallax {
+    position: relative;
+    overflow: hidden;
+    perspective: 1px;
+    /* keep things crisp */
+    transform-style: preserve-3d;
+}
+
+
+/* A reusable section that holds a background layer and content */
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center center;
+    background-size: cover;
+    will-change: transform;
+    transform: translateZ(-1px) scale(2);
+    /* subtle depth by default */
+    pointer-events: none;
+}
+
+
+/* Hero/first section */
+.hero {
+    height: var(--hero-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center center;
+    z-index: 0;
+    transform-origin: center;
+    will-change: transform;
+}
+
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--overlay);
+    z-index: 1
+}
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: var(--content-width);
+    padding: 2rem;
+    text-align: center;
+    color: #fff
+}
+
+.hero h1 {
+    font-size: clamp(1.6rem, 4vw, 3rem);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem
+}
+
+.hero p {
+    opacity: 0.95
+}
+
+
+/* Normal content sections */
+.section {
+    padding: 4rem 1.5rem;
+    background: #fff
+}
+
+.section--alt {
+    background: #f7f7f7
+}
+/* 
+.container {
+    max-width: var(--content-width);
+    margin: 0 auto
+} */
+
+
+/* Additional parallax background sections */
+.parallax-bg {
+    position: relative;
+    height: 75vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff
+}
+
+.parallax-bg__layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    will-change: transform
+}
+
+.parallax-bg__overlay {
+    position: absolute;
+    inset: 0;
+    /* background: rgba(0, 0, 0, 0.75) */
+}
+
+.parallax-bg__content {
+    position: relative;
+    z-index: 2;
+    text-align: center
+}
+
+.parallax-bg__content h2 {
+    font-size: 48px;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem
+}
+
+.parallax-bg__content img {
+    width: 100%;
+}
+
+
+/* Utility */
+.muted {
+    color: #666
+}
+
+@media (max-width : 479px) {
+    .parallax-bg {
+        height: 30vh;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width:600px) {
+    :root {
+        --hero-height: 55vh
+    }
+
+    .hero h1 {
+        font-size: 1.6rem
+    }
+}
