@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->addCC('anchal.choudhary@india.messefrankfurt.com', 'Anchal Choudhary');
 
         $mail->isHTML(true);
-        $mail->Subject = 'India Refining Summit Partnership 2026';
+        $mail->Subject = 'Sponsorship: India Refining Summit 2026';
         $mail->Body = "<p><strong>Name:</strong> {$name}</p>
                        <p><strong>Designation:</strong> {$designation}</p>
                        <p><strong>Email:</strong> {$email}</p>

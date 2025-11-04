@@ -55,7 +55,6 @@ document.addEventListener('footerLoaded', () => {
 document.addEventListener('navbarLoaded', () => {
   const showAnim = gsap.from('.navbar', {
   yPercent: -100,
-  position: 'fixed',
   paused: true,
   duration: 0.5,
   ease: "power4.inOut"
@@ -68,9 +67,12 @@ ScrollTrigger.create({
   markers: false,
   onUpdate: (self) => {
 
+    const navbar = document.querySelector('.navbar');
+
     // // 1️⃣ At top of page
     if (self.scroll() === 0) {
       showAnim.play();
+      navbar.style.position = 'relative';
       gsap.to('.header-ticket', {
         opacity: 0,
         duration: 0.25,
@@ -82,6 +84,7 @@ ScrollTrigger.create({
     // 2️⃣ Scrolling up (not at top)
     if (self.direction === -1) {
       showAnim.play();
+      navbar.style.position = 'fixed';
       gsap.to('.header-ticket', {
         opacity: 1,
         duration: 0.25,
@@ -92,6 +95,7 @@ ScrollTrigger.create({
     // 3️⃣ Scrolling down
     else {
       showAnim.reverse();
+      navbar.style.position = 'fixed';
       gsap.to('.header-ticket', {
         opacity: 1,
         duration: 0.25,

@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->addAddress('info@messefrankfurtindia.in', 'Enquiry Received');
 
         $mail->isHTML(true);
-        $mail->Subject = 'From India Refining Summit Agenda 2025';
+        $mail->Subject = 'Agenda Request: India Refining Summit 2026';
         $mail->Body = "<p><strong>Name:</strong> {$name}</p>
                        <p><strong>Designation:</strong> {$designation}</p>
                        <p><strong>Email:</strong> {$email}</p>
