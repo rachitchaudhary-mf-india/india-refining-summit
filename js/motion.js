@@ -1,109 +1,109 @@
 // Anchor links Arrow + Image Zoom Animation
 document.addEventListener('footerLoaded', () => {
-    const teaserItems = document.querySelectorAll('.teaser-item');
+  const teaserItems = document.querySelectorAll('.teaser-item');
 
-    teaserItems.forEach(item => {
-        const arrowImg = item.querySelector('.anchor-arrow');
-        const teaserImg = item.querySelector('.a-image img');
-        const anchorParent = item.closest('a') || item.querySelector('a');
+  teaserItems.forEach(item => {
+    const arrowImg = item.querySelector('.anchor-arrow');
+    const teaserImg = item.querySelector('.a-image img');
+    const anchorParent = item.closest('a') || item.querySelector('a');
 
-        let arrowTween, zoomTween;
+    let arrowTween, zoomTween;
 
-        if (anchorParent) {
-            // On hover
-            anchorParent.addEventListener('mouseenter', () => {
-                // Arrow movement
-                if (arrowTween) arrowTween.kill();
-                arrowTween = gsap.to(arrowImg, {
-                    x: 8,
-                    duration: 0.3,
-                    ease: "power2.out"
-                });
+    if (anchorParent) {
+      // On hover
+      anchorParent.addEventListener('mouseenter', () => {
+        // Arrow movement
+        if (arrowTween) arrowTween.kill();
+        arrowTween = gsap.to(arrowImg, {
+          x: 8,
+          duration: 0.3,
+          ease: "power2.out"
+        });
 
-                // Image zoom
-                if (zoomTween) zoomTween.kill();
-                zoomTween = gsap.to(teaserImg, {
-                    scale: 1.1,
-                    duration: 0.5,
-                    ease: "power2.out"
-                });
-            });
+        // Image zoom
+        if (zoomTween) zoomTween.kill();
+        zoomTween = gsap.to(teaserImg, {
+          scale: 1.1,
+          duration: 0.5,
+          ease: "power2.out"
+        });
+      });
 
-            // On leave
-            anchorParent.addEventListener('mouseleave', () => {
-                // Reset arrow
-                if (arrowTween) arrowTween.kill();
-                arrowTween = gsap.to(arrowImg, {
-                    x: 0,
-                    duration: 0.3,
-                    ease: "power2.inOut"
-                });
+      // On leave
+      anchorParent.addEventListener('mouseleave', () => {
+        // Reset arrow
+        if (arrowTween) arrowTween.kill();
+        arrowTween = gsap.to(arrowImg, {
+          x: 0,
+          duration: 0.3,
+          ease: "power2.inOut"
+        });
 
-                // Reset image
-                if (zoomTween) zoomTween.kill();
-                zoomTween = gsap.to(teaserImg, {
-                    scale: 1,
-                    duration: 0.5,
-                    ease: "power2.inOut"
-                });
-            });
-        }
-    });
+        // Reset image
+        if (zoomTween) zoomTween.kill();
+        zoomTween = gsap.to(teaserImg, {
+          scale: 1,
+          duration: 0.5,
+          ease: "power2.inOut"
+        });
+      });
+    }
+  });
 });
 
 // navbar scroll and header ticket animation
 document.addEventListener('navbarLoaded', () => {
   const showAnim = gsap.from('.navbar', {
-  yPercent: -100,
-  paused: true,
-  duration: 0.5,
-  ease: "power4.inOut"
-}).progress(1);
+    yPercent: -100,
+    paused: true,
+    duration: 0.5,
+    ease: "power4.inOut"
+  }).progress(1);
 
-// navbar scroll animation
-ScrollTrigger.create({
-  start: "top top",
-  end: "max",
-  markers: false,
-  onUpdate: (self) => {
+  // navbar scroll animation
+  ScrollTrigger.create({
+    start: "top top",
+    end: "max",
+    markers: false,
+    onUpdate: (self) => {
 
-    const navbar = document.querySelector('.navbar');
+      const navbar = document.querySelector('.navbar');
 
-    // // 1️⃣ At top of page
-    if (self.scroll() === 0) {
-      showAnim.play();
-      navbar.style.position = 'relative';
-      gsap.to('.header-ticket', {
-        opacity: 0,
-        duration: 0.25,
-        ease: "power1.out"
-      });
-      return; // stop here so no other state runs
+      // // 1️⃣ At top of page
+      if (self.scroll() === 0) {
+        showAnim.play();
+        navbar.style.position = 'relative';
+        gsap.to('.header-ticket', {
+          opacity: 0,
+          duration: 0.25,
+          ease: "power1.out"
+        });
+        return; // stop here so no other state runs
+      }
+
+      // 2️⃣ Scrolling up (not at top)
+      if (self.direction === -1) {
+        showAnim.play();
+        navbar.style.position = 'fixed';
+        gsap.to('.header-ticket', {
+          opacity: 1,
+          duration: 0.25,
+          ease: "power1.out"
+        });
+      }
+
+      // 3️⃣ Scrolling down
+      else {
+        showAnim.reverse();
+        navbar.style.position = 'fixed';
+        gsap.to('.header-ticket', {
+          opacity: 1,
+          duration: 0.25,
+          ease: "power1.out"
+        });
+      }
     }
-
-    // 2️⃣ Scrolling up (not at top)
-    if (self.direction === -1) {
-      showAnim.play();
-      navbar.style.position = 'fixed';
-      gsap.to('.header-ticket', {
-        opacity: 1,
-        duration: 0.25,
-        ease: "power1.out"
-      });
-    }
-
-    // 3️⃣ Scrolling down
-    else {
-      showAnim.reverse();
-      navbar.style.position = 'fixed';
-      gsap.to('.header-ticket', {
-        opacity: 1,
-        duration: 0.25,
-        ease: "power1.out"
-      });
-    }
-  }
-});
+  });
 })
 
 // Glimpses Slideshow
@@ -114,13 +114,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!slideshowContainer || !mainImg) return;
 
   const images = [
-        './images/slides/7U6A0077.webp',
-        './images/slides/_UB_8970.webp',
-        './images/slides/_UB_9176.webp',
-        './images/slides/7U6A0061.webp',
-        './images/slides/FB1A6624.webp',
-        './images/slides/FB1A6627.webp'
-    ];
+    './images/slides/7U6A0077.webp',
+    './images/slides/_UB_8970.webp',
+    './images/slides/_UB_9176.webp',
+    './images/slides/7U6A0061.webp',
+    './images/slides/FB1A6624.webp',
+    './images/slides/FB1A6627.webp'
+  ];
 
   const slideDuration = 1.2; // sec
   const displayTime = 3;     // sec
@@ -185,49 +185,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // m-image-teaser animation
 document.addEventListener("DOMContentLoaded", () => {
-    const teasers = document.querySelectorAll(".m-image-teaser");
+  const teasers = document.querySelectorAll(".m-image-teaser");
 
-    teasers.forEach(teaser => {
-        const img = teaser.querySelector(".a-image img");
-        const button = teaser.querySelector(".primary-btn");
+  teasers.forEach(teaser => {
+    const img = teaser.querySelector(".a-image img");
+    const button = teaser.querySelector(".primary-btn");
 
-        teaser.addEventListener("mouseenter", () => {
-            // Zoom image
-            gsap.to(img, {
-                scale: 1.1,
-                duration: 0.5,
-                ease: "power2.out"
-            });
+    teaser.addEventListener("mouseenter", () => {
+      // Zoom image
+      gsap.to(img, {
+        scale: 1.1,
+        duration: 0.5,
+        ease: "power2.out"
+      });
 
-            // Darken button color
-            gsap.to(button, {
-                backgroundColor: "#B93E2D",
-                duration: 0.3,
-                ease: "power2.out"
-            });
-        });
-
-        teaser.addEventListener("mouseleave", () => {
-            // Reset image
-            gsap.to(img, {
-                scale: 1,
-                duration: 0.5,
-                ease: "power2.out"
-            });
-
-            // Reset button color
-            gsap.to(button, {
-                backgroundColor: "#E74E38",
-                duration: 0.3,
-                ease: "power2.out"
-            });
-        });
+      // Darken button color
+      gsap.to(button, {
+        backgroundColor: "#B93E2D",
+        duration: 0.3,
+        ease: "power2.out"
+      });
     });
+
+    teaser.addEventListener("mouseleave", () => {
+      // Reset image
+      gsap.to(img, {
+        scale: 1,
+        duration: 0.5,
+        ease: "power2.out"
+      });
+
+      // Reset button color
+      gsap.to(button, {
+        backgroundColor: "#E74E38",
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    });
+  });
 });
 
 // .m-quick-link animation
 document.addEventListener("DOMContentLoaded", () => {
-    gsap.registerPlugin(ScrollToPlugin);
+  gsap.registerPlugin(ScrollToPlugin);
 
   document.querySelectorAll('.m-quick-link').forEach(link => {
     link.addEventListener('click', e => {
@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-} )
+})
 
 // Header Ticket Arrow rotation
 // Primary button arrow animation
@@ -266,3 +266,141 @@ document.addEventListener('navbarLoaded', () => {
     primaryBtnSpan.classList.remove("rotate90");
   });
 })
+
+// header cubes animation
+const mCubeEl = document.querySelector('.m-cube')
+
+if (mCubeEl) {
+  window.addEventListener('eventBanner', () => {
+    const slides = document.querySelectorAll('.carousel-text');
+    const cubeLink = document.querySelector('.primary-m-cube');
+    const indicatorsContainer = document.querySelector('.carousel-indicators-rc');
+
+    const urls = [
+      "#",
+      "#",
+      "#",
+    ];
+
+    // Create indicators dynamically
+    slides.forEach((_, i) => {
+      const dot = document.createElement('span');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        tl.pause();
+        goToSlide(i);
+      });
+      indicatorsContainer.appendChild(dot);
+    });
+
+    const dots = indicatorsContainer.querySelectorAll('span');
+
+    // Function to update indicators
+    function updateIndicators(index) {
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    // Function to jump to a specific slide instantly
+    function goToSlide(index) {
+      tl.seek(index * slideDuration).play();
+    }
+
+    const slideDuration = 5.7; // duration per slide (0.8 in + 4 hold + 0.8 out + 0.1 gap)
+
+    // GSAP timeline
+    const tl = gsap.timeline({ repeat: -1 });
+
+    slides.forEach((slide, i) => {
+      tl.add(() => {
+        cubeLink.href = urls[i];
+        updateIndicators(i);
+      }).to(slide, {
+        x: "-100%",
+        opacity: 1,
+        duration: 0.8,
+        ease: "power4.out"
+      })
+        .to({}, { duration: 4 })
+        .to(slide, {
+          x: "-200%",
+          opacity: 0,
+          duration: 0.8,
+          ease: "power4.in"
+        }, "+=0.1");
+    });
+
+    // One-time cube animations
+    gsap.to('.primary-m-cube', {
+      opacity: 1,
+      xPercent: -60,
+      duration: 1.7,
+      stagger: 0.1,
+      ease: "power4.out",
+      delay: 0.7
+    });
+
+    gsap.from('.m-cube', {
+      yPercent: -100,
+      opacity: 1,
+      duration: 1,
+      stagger: 0.1,
+      ease: "power4.out",
+      delay: 0.7
+    });
+  });
+}
+
+
+// header cube animation
+const mCube = gsap.to('.m-cube', {
+  yPercent: 0,
+  opacity: 1,
+  duration: 0.0025,
+  ease: "power1.out",
+}).progress(1);
+
+// Header cube scroll animation
+ScrollTrigger.create({
+  start: "top top",
+  end: "max",
+  markers: false,
+  onUpdate: (self) => {
+
+    // 1️⃣ At top of page
+    if (self.scroll() === 0) {
+      gsap.to('.m-cube', {
+        position: 'unset',
+        height: '180px',
+        opacity: 1,
+        duration: 0.25,
+        ease: "power1.out"
+      });
+      return; // stop here so no other state runs
+    }
+
+    // 2️⃣ Scrolling up (not at top)
+    if (self.direction === -1) {
+      gsap.to('.m-cube', {
+        height: '88px',
+        position: 'fixed',
+        opacity: 1,
+        duration: .25,
+        ease: "power1.out"
+      });
+      mCube.play();
+    }
+
+    // 3️⃣ Scrolling down
+    else {
+      gsap.to('.m-cube', {
+        height: '88px',
+        opacity: 0,
+        duration: 0.25,
+        ease: "power1.out"
+      });
+      mCube.reverse();
+    }
+  }
+});

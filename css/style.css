@@ -700,7 +700,7 @@ a[href^=tel] {
 	border-radius: 0;
 	border: 0;
 	margin-bottom: 0;
-	background: #ffffff;
+	background: rgba(255,255,255,.9);
 	border-bottom:2px solid #dadada;
 }
 

@@ -327,6 +327,13 @@ blockquote {
     /* .advisory-board .person-photo img {
         height: 180px;
     } */
+    .ts-speaker-info {
+        width: 65%;
+        margin: 0px auto;
+    }
+    .ts-speaker-image img {
+        width: 50%;
+    }
 }
 
 /* Tablet Device */
